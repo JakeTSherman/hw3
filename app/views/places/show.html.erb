@@ -1,8 +1,7 @@
 <h1><%= @place.name %></h1>
 
 <h2>Posts</h2>
-<% @posts = Post.where({id: "#{@place.id}"})%>
-
+<% @posts = Post.where({place_id: "#{@place.id}"})%>
 <% for post in @posts %>
 <h3>
 <%= post.title%>
