@@ -1,0 +1,24 @@
+<h1>New Post</h1>
+
+<%= form_with model: @post do |form| %>
+  <p>
+    <%= form.label "title", "Title:" %>
+    <%= form.text_field "title" %>
+  </p>
+  <p>
+    <%= form.label "description", "What Happened?" %>
+    <%= form.text_field "description" %>
+    </p>
+<p>
+    <%= form.label "date", "Date:" %>
+    <%= form.date_field "date" %>
+</p>
+
+    <p>
+    <%= form.hidden_field "place_id" %>
+  </p>
+  <%= form.submit %>
+<% end %>
+<p>
+<a href="/places">Back to Home</a>
+</p>
